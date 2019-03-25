@@ -1,0 +1,125 @@
+# 套用 antigen
+source /usr/local/share/antigen/antigen.zsh
+# 載入 autojump 外掛
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# 安裝 Powerlevel9K 主題
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+
+# 字體安裝說明
+###########################################################################################
+#####                       字體安裝說明                                                #####
+#####       $ brew tap homebrew/cask-fonts                                            #####
+#####       $ brew search nerd                                                        #####
+#####       $ brew cask install font-hack-nerd-font font-sourcecodepro-nerd-font      #####
+###########################################################################################
+# POWERLEVEL 字體補全設定
+POWERLEVEL9K_MODE='nerdfont-complete' 
+# POWERLEVEL9K 主題設定
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context virtualenv dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator time)
+POWERLEVEL9K_ALWAYS_SHOW_USER=true
+POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
+POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%b%f%k%F{blue}%} %{%f%}"
+POWERLEVEL9K_CUSTOM_FEDORA_ICON="echo <unicode logo icon> "
+POWERLEVEL9K_CUSTOM_FEDORA_ICON_BACKGROUND=069
+POWERLEVEL9K_CUSTOM_FEDORA_ICON_FOREGROUND=015
+
+TERM="xterm-256color"
+
+# 自動更新plugins
+DISABLE_UPDATE_PROMPT=true
+
+# ZSH啟用主題
+antigen theme bhilburn/powerlevel9k powerlevel9k
+# Antigen 指定 oh-my-zsh 並引入擴充套件
+antigen use oh-my-zsh
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle bower
+antigen bundle node 
+antigen bundle xcode
+antigen bundle osx
+antigen bundle colored-man-pages
+antigen bundle copyfile
+antigen bundle python
+antigen bundle copydir
+antigen bundle docker
+antigen bundle virtualenv
+antigen bundle iterm2
+antigen bundle sublime
+antigen bundle urltools
+antigen bundle vagrant
+antigen bundle sudo
+antigen bundle bundler
+
+# 從 Github 安裝外掛
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
+
+# antigen bundle lukechilds/zsh-better-npm-completion
+
+# 語系設定
+LANG="en_US.UTF-8"
+LC_ALL="en_US.UTF-8" 
+export LANG=zh_TW.UTF-8
+
+# ssh
+SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# GO語言環境變量
+export GOPATH="${HOMW}/.go"
+export GOROOT="/usr/local/opt/go/libexec"
+
+# 環境變量設定
+export PATH="/usr/local/bin:$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+
+#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+#export LDFLAGS="-L/usr/local/opt/ruby/lib"
+#export CPPFLAGS="-I/usr/local/opt/ruby/include"
+#export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+
+# 啟用 antigen 設定
+antigen apply
+
+# 參考來源 https://blog.gbanyan.net/2018/07/24/iterm2-zsh-oh-my-zsh-antigen-configuration-notes/
+
+alias scdl="youtube-dl --config-location /Users/nick/.config/youtube-dl/scdl.conf -a /Users/nick/youtube-dl/scdl.txt"
+alias mcdl="youtube-dl --config-location /Users/nick/.config/youtube-dl/mcdl_config.conf -a /Users/nick/.config/youtube-dl/mcdl.txt"
+alias dl="youtube-dl --config-location ~/.config/youtube-dl/youtube-dl.conf"
+alias vdl="youtube-dl --config-location ~/.config/youtube-dl/vdl.conf"
+alias zshconfig="open ~/.zshrc"
+alias zshrc="open ~/.zshrc"
+alias cdgit="cd ~/Documents/GitHub"
+alias sshhosts="open ~/.ssh/known_hosts"
+alias brewi="brew install"
+alias brewuni="brew uninstall"
+alias brewrei="brew reinstall"
+alias brews="brew search"
+alias brewci="brew cask install"
+alias brewcuni="brew cask uninstall"
+alias brewcrei="brew cask reinstall"
+alias brewupd="brew update"
+alias brewupg="brew upgrade"
+alias brewcl="brew cleanup"
+alias addapp="nativefier --name"
+alias dv="./dl-video -b"
+alias i="install"
+alias uni="uninstall"
+alias rei="reinstall"
+alias bc="brew cask"
+
+source /Users/nick/.bash_profile
