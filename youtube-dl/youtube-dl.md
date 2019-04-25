@@ -10,8 +10,8 @@
 
 - 路徑 `/etc/youtube-dl.conf` 以下為設定檔範例:
 - 或下載文件再置於上述路徑
-  - [youtube-dl.conf](/youtube-dl.tar.gz) (MacOS)
-  - [youtube-dl_moode.conf](/youtube-dl_moode.tar.gz) (moOde OS)
+  - [youtube-dl.conf](./youtube-dl.tar.gz) (MacOS)
+  - [youtube-dl_moode.conf](./youtube-dl_moode.tar.gz) (moOde OS)
 
 ```sh
 # Lines starting with # are comments
