@@ -23,7 +23,7 @@ brew install aria2
 <details>
 <summary>範例</summary>
 
-```plist
+```
 <!--?xml version="1.0" encoding="UTF-8"?-->
 <plist version="1.0">
     <dict>
@@ -62,7 +62,7 @@ brew services start aria2
 <details>
 <summary>範例</summary>
 
-```properties
+```
 ## '#'開頭爲註釋內容, 選項都有相應的註釋說明, 根據需要修改 ##
 ## 被註釋的選項填寫的是默認值, 建議在需要修改時再取消註釋  ##
 
