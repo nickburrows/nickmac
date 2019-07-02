@@ -12,7 +12,7 @@ brew install aria2
 - Step 2. 新增開機自動運行文件
   - 在aria2資料夾中新增開機自動運行文件"[homebrew.mxcl.aria2.plist](homebrew.mxcl.aria2.plist)"，
   - 如使用Homebrew方式安裝，參考路徑: `/usr/local/Cellar/aria2/[版本XXX]/`
-  - `--rpc-secret=TOKEN`，**TOKEN**需與`aria2.conf`中設置相同
+  - `--rpc-secret=TOKEN`，**TOKEN**需與aria2.conf中[`rpc-secret=<TOKEN>`](aria2.conf#L68)中設置相同
 
 範例:
 
