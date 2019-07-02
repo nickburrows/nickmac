@@ -47,4 +47,4 @@ brew services start aria2
 
 路徑`$HOME/.aria2./aria2.conf`
 
-[配置文件參考](/aria2.conf)
+[配置文件參考](aria2.conf)
