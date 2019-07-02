@@ -1,4 +1,4 @@
-# MacOS 安裝 Aria2
+# 安裝Aria2
 
 ## 安裝方式
 
