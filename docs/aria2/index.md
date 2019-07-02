@@ -7,7 +7,7 @@ title: 安裝Aria2
 
 - Step 1. 使用**Homebrew**安裝
   
-  ```bash
+  ```
   brew search aria2
   brew install aria2
   ```
@@ -15,7 +15,7 @@ title: 安裝Aria2
 - Step 2. 新增開機自動運行文件
   - 在aria2資料夾中新增開機自動運行文件"[homebrew.mxcl.aria2.plist](homebrew.mxcl.aria2.plist)"
   
-  ```plist
+  ```
   <!--?xml version="1.0" encoding="UTF-8"?-->
   <plist version="1.0">
       <dict>
@@ -41,7 +41,7 @@ title: 安裝Aria2
   - `--rpc-secret=TOKEN`，**TOKEN**需與aria2.conf中[`rpc-secret=<TOKEN>`](aria2.conf#L68)中設置相同
 - Step 3. 啟動aria2
   
-  ```bash
+  ```
   brew services start aria2
   ```
 
