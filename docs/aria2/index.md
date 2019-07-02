@@ -17,6 +17,9 @@ brew install aria2
   - 如使用Homebrew方式安裝，參考路徑: `/usr/local/Cellar/aria2/[版本XXX]/`
   - `--rpc-secret=TOKEN`，**TOKEN**需與aria2.conf中[`rpc-secret=<TOKEN>`](aria2.conf#L68)中設置相同
 
+
+### `homebrew.mxcl.aria2.plist`
+
 <details>
 <summary>範例</summary>
 
@@ -53,6 +56,8 @@ brew services start aria2
 ### 配置文件 `aria2.conf`
 
 參考路徑: `$HOME/.aria2./aria2.conf`，[aria2.conf文檔](aria2.conf)
+
+#### `aria2.conf`
 
 <details>
 <summary>範例</summary>
