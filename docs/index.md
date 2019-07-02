@@ -5,8 +5,6 @@
 layout: home
 ---
 
-## Markdown介紹
-
 - 基本寫作技巧
   - [HackMD-功能介紹](https://hackmd.io/s/features-tw)
   - https://github.com/guangqiang-liu/MarkdownSyntax#del%E6%A0%87%E7%AD%BE
