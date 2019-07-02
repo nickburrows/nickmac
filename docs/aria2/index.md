@@ -20,12 +20,14 @@ title: 安裝Aria2
   ```
   - 配置文件 [aria2.conf文檔](aria2.conf)，參考路徑: `$HOME/.aria2./aria2.conf`
 
-### homebrew.mxcl.aria2.plist
+### 文檔配置範例 - 開機自動運行aria2
 
 <details>
-<summary>範例</summary>
+<summary>homebrew.mxcl.aria2.plist</summary>
 
-```
+開機自動運行aria2
+
+```plist
 <!--?xml version="1.0" encoding="UTF-8"?-->
 <plist version="1.0">
     <dict>
@@ -49,12 +51,14 @@ title: 安裝Aria2
 
 </details>
 
-### aria2.conf
+### 文檔配置範例 - aria2設定檔
 
 <details>
-<summary>範例</summary>
+<summary>aria2.conf</summary>
 
-```
+aria2.conf基本配置
+
+```properties
 ## '#'開頭爲註釋內容, 選項都有相應的註釋說明, 根據需要修改 ##
 ## 被註釋的選項填寫的是默認值, 建議在需要修改時再取消註釋  ##
 
@@ -177,4 +181,5 @@ bt-save-metadata=true
 ### 參考來源 ###
 ### https://www.twblogs.net/a/5b8cf86d2b7177188337e200
 ```
+
 </details>
