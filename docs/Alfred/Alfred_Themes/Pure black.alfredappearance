@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 9,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#FFFFFF5C",
+        "font" : "System Light",
+        "color" : "#FDFCFF4C"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "System Light",
+        "color" : "#FFFFFF4C"
+      },
+      "backgroundSelected" : "#FEFFFE1A",
+      "text" : {
+        "size" : 23,
+        "colorSelected" : "#FFFFFFB1",
+        "font" : "System Light",
+        "color" : "#F9F9FF72"
+      },
+      "iconPaddingHorizontal" : 13,
+      "paddingVertical" : 5,
+      "iconSize" : 32
+    },
+    "search" : {
+      "paddingVertical" : 0,
+      "background" : "#00000000",
+      "spacing" : 12,
+      "text" : {
+        "size" : 45,
+        "colorSelected" : "#000000FF",
+        "font" : "System Light",
+        "color" : "#FFFFFFD1"
+      },
+      "backgroundSelected" : "#B2D7FFFF"
+    },
+    "window" : {
+      "color" : "#000000FF",
+      "paddingHorizontal" : 0,
+      "width" : 559,
+      "borderPadding" : 0,
+      "borderColor" : "#0000007F",
+      "blur" : 0,
+      "roundness" : 6,
+      "paddingVertical" : 5
+    },
+    "credit" : "Marcus Kwan",
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#4FE085CB",
+      "thickness" : 3
+    },
+    "name" : "Pure black"
+  }
+}
