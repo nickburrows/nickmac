@@ -177,3 +177,8 @@ bt-save-metadata=true
 ```
 
 </details>
+
+### Aria2插件
+
+- [Camtd](https://github.com/jae-jae/camtd)
+- [WebUI-Aria2](https://github.com/ziahamza/webui-aria2)
