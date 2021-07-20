@@ -1,17 +1,16 @@
 ---
+youtube-dl
+---
 
-## youtube-dl
-
-### 安裝
+# 安裝 **youtube-dl**, **ffmpeg**
 
 開啟終端機輸入指令 `brew install youtube-dl ffmpeg` 安裝youtube-dl, ffmpeg
 
-### 設定檔
+## 設定
 
-- 路徑 `/etc/youtube-dl.conf` 以下為設定檔範例:
-- 或下載文件再置於上述路徑
-  - [youtube-dl.conf](./youtube-dl.tar.gz) (MacOS)
-  - [youtube-dl_moode.conf](./youtube-dl_moode.tar.gz) (moOde OS)
+設定檔路徑: `/Users/nick/.config/youtube-dl/conf`
+
+範例:
 
 ```sh
 # Lines starting with # are comments
@@ -39,6 +38,17 @@
 # 不要有.part
 #--no-part
 
+# Always extract audio 只取音頻
+#-x
+
+# Do not copy the mtime
+--no-mtime
+
+# Use this proxy
+#--proxy 127.0.0.1:3128
+
+# Save all videos under Movies directory in your home directory
+#-o ~/Movies/%(title)s.%(ext)s
 # 儲存路徑與檔名格式
--o '/Users/nick/youtube-dl/%(title)s.%(ext)s'
+-o /Users/nick/youtube-dl/%(title)s.%(ext)s
 ```
