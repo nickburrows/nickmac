@@ -14,27 +14,37 @@
 
    ```applescript
    on run {input, parameters}
-       try
-           tell application "Finder" to set the thisFolder to (folder of the front window) as alias
-       on error -- if no folder is open in finder or focused in running application, set default location to desktop
-           set the thisFolder to path to desktop folder
-       end try
-       set fileName to text returned of (display dialog "Create new .txt file named:" default answer "Untitled")
-       set filePath to POSIX path of thisFolder
-       set theFile to filePath & fileName
-       set prefixString to "copy of "
-       -- if filename already existing, this service will ask for a new filename
-       tell application "Finder"
-           repeat while exists file theFile as POSIX file
-               set fileName to text returned of (display dialog "\"" & fileName & "\"  already exists, please provide another name:" default answer prefixString & "Textfile.txt")
-               set theFile to filePath & fileName
-               set prefixString to prefixString & "copy of "
-           end repeat
-       end tell
 
-       do shell script "touch \"" & theFile & "\""
+    try
 
-       return input
+        tell application "Finder" to set the thisFolder to (folder of the front window) as alias
+
+    on error -- if no folder is open in finder or focused in running application, set default location to desktop
+
+        set the thisFolder to path to desktop folder
+
+    end try
+
+    set fileName to text returned of (display dialog "Create new .txt file named:" default answer "Untitled")
+    set filePath to POSIX path of thisFolder
+    set theFile to filePath & fileName
+    set prefixString to "copy of "
+
+    -- if filename already existing, this service will ask for a new filename
+    tell application "Finder"
+
+        repeat while exists file theFile as POSIX file
+
+            set fileName to text returned of (display dialog "\"" & fileName & "\"  already exists, please provide another name:" default answer prefixString & "Untitled")
+            set theFile to filePath & fileName
+            set prefixString to prefixString & "copy of "
+        end repeat
+
+    end tell
+
+    do shell script "touch \"" & theFile & "\""
+
+    return input
    end run
    ```
 
